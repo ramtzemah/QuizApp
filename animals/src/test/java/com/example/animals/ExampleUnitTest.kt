@@ -1,4 +1,4 @@
-package eu.tutorials.quizapp
+package com.example.animals
 
 import org.junit.Test
 

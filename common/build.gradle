@@ -1,19 +1,18 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdk 31
+    namespace 'com.example.common'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "eu.tutorials.quizapp"
         minSdk 21
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -25,15 +24,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdflagsApp")
-
-        }
-
-        debug {
-            debuggable true
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdflagsApp")
+            addConstantTo(owner,"AD_MOB_BANNER_ID", "ryrwyywrtywr")
 
         }
     }
@@ -55,6 +46,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation project(':common')
-
 }

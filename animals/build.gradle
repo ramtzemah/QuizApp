@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
+    namespace 'com.example.animals'
     compileSdk 31
 
     defaultConfig {
-        applicationId "eu.tutorials.quizapp"
+        applicationId "com.example.animals"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -22,18 +23,18 @@ android {
             target.buildConfigField "String", "${constantName}", "\"${constantValue}\""
         }
 
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdflagsApp")
-
-        }
-
         debug {
             debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdflagsApp")
+            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdAnimalsApp")
+
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            addConstantTo(owner,"AD_MOB_BANNER_ID", "adIdAnimalsApp")
 
         }
     }
