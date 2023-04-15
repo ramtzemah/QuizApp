@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Animals</string>
+    <string name="app_name">Animals Quiz</string>
     <string name="the_question">What animal does appear in this photo?</string>
     <string name="categories">Animals</string>
     <string name="option1">Lion</string>
